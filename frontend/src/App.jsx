@@ -56,7 +56,7 @@ if (response.data.config && response.data.config.modalScreenshotUrl) {
   return (
     <div>
       <header>
-        <h1>Agenda de Jogos do Palmeiras</h1> {/* Atualize o título */}
+        <h1>Agenda de Jogos do Santos</h1> {/* Atualize o título */}
         <p>Onde assistir aos próximos jogos do Verdão!</p>
         {lastUpdated && <p className="last-updated">Última atualização: {lastUpdated}</p>}
         <button onClick={updateMatches} disabled={loading} className="update-button">
@@ -139,7 +139,7 @@ if (response.data.config && response.data.config.modalScreenshotUrl) {
       </main>
 
       <footer>
-        <p>&copy; {new Date().getFullYear()} Palmeiras Broadcast Info. Todos os direitos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Santos Broadcast Info. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
