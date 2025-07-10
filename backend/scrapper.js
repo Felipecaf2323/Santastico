@@ -15,7 +15,8 @@ async function getJogosDoSantos() {
     browser = await puppeteer.launch({
       headless: false, // Mude para true para produção, false para depuração visual
       args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--start-maximized'],
-      defaultViewport: null
+      defaultViewport: null,
+      executablePath: '/usr/bin/chromium'
     });
     const page = await browser.newPage();
 
