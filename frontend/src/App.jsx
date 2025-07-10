@@ -1,6 +1,7 @@
 // App.jsx
 import React, { useState, useEffect, useCallback } from "react";
 import axios from 'axios';
+import { FaSyncAlt } from 'react-icons/fa';
 
 const App = () => {
   const [matches, setMatches] = useState([]);
@@ -9,7 +10,7 @@ const App = () => {
   const [lastUpdated, setLastUpdated] = useState(null);
   const [modalScreenshotUrl, setModalScreenshotUrl] = useState(null); // Novo estado para a URL da screenshot
 
-  const API_BASE_URL = 'http://localhost:3001/api';
+  const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
   const fetchData = useCallback(async (isUpdate = false) => {
     try {
@@ -57,9 +58,12 @@ if (response.data.config && response.data.config.modalScreenshotUrl) {
     <div>
       <header>
         <h1>Agenda de Jogos do Santos</h1> {/* Atualize o título */}
-        <p>Onde assistir aos próximos jogos do Verdão!</p>
+        <p>Onde assistir aos próximos jogos do Peixe!</p>
         {lastUpdated && <p className="last-updated">Última atualização: {lastUpdated}</p>}
         <button onClick={updateMatches} disabled={loading} className="update-button">
+          <span className="refresh-icon" aria-hidden="true">
+            <FaSyncAlt />
+          </span>
           {loading ? "Atualizando..." : "Atualizar Jogos"}
         </button>
       </header>
