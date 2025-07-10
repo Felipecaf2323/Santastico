@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "apt-get update && apt-get install -y chromium && echo 'Chromium installed'",
+    "build": "apt-get update && apt-get install -y chromium-browser && echo 'Chromium installed'",
     "start": "node server.js"
   },
   "keywords": [],
