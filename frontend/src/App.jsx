@@ -32,8 +32,8 @@ const App = () => {
       // Define a URL da screenshot, adicionando um timestamp para evitar cache
 if (response.data.config && response.data.config.modalScreenshotUrl) {
   // Remova ${API_BASE_URL} e use diretamente a base do servidor Express
-  setModalScreenshotUrl(`http://localhost:3001${response.data.config.modalScreenshotUrl}?t=${Date.now()}`);
-} else {
+  const backendBase = API_BASE_URL.replace(/\/api$/, '');
+  setModalScreenshotUrl(`${backendBase}${response.data.config.modalScreenshotUrl}?t=${Date.now()}`);} else {
   setModalScreenshotUrl(null);
 }
 

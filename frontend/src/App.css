@@ -51,35 +51,31 @@
 }
 
 .update-button {
-  background: linear-gradient(90deg, #ffb300 0%, #ff6f00 100%);
-  color: #222;
-  padding: 18px 40px;
+  background-color: #20663a;
+  color: #fff;
+  padding: 14px 32px;
   border: none;
-  border-radius: 16px;
-  font-size: 1.5rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
   font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
-  margin-top: 30px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
-  outline: 4px solid #fffbe7;
-  outline-offset: 2px;
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
+  text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 2px #fffbe7;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  margin-top: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: inline-block;
 }
 
 .update-button:hover {
-  background: linear-gradient(90deg, #ffd54f 0%, #ff9800 100%);
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.30);
+  background-color: #1b5631;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
 }
 
 .update-button:disabled {
-  background: #ffe0b2;
-  color: #aaa;
+  background: #b7d7c2;
+  color: #eee;
   cursor: not-allowed;
   opacity: 0.7;
   transform: none;
@@ -87,11 +83,8 @@
 }
 
 .update-button .refresh-icon {
-  font-size: 2rem;
-  animation: spin-refresh 1.2s linear infinite;
-}
-
-@keyframes spin-refresh {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  font-size: 1.5rem;
+  margin-right: 10px;
+  vertical-align: middle;
+  animation: none;
 }
